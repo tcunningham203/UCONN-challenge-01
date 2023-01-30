@@ -1,96 +1,117 @@
+/* All comments will be written exactly one line above the lines being referenced. The comments themselves are almost all explainations about the function- any changes to the CSS, like reducing the number of classes, has been documented in the relevant section of the HTML file.*/
+
+/* This setting applies to the whole document. These are default values applied to all boxes that keep boxes from overlapping with each other. */
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
+/* This is for the light grey background behind the blue boxes. You can see it more near the footer. */
 body {
     background-color: #d9dcd6;
 }
 
-.header {
+/* This is the class assigned to the header. It makes the header area have a blue background.*/
+.banner {
+    background-color: #2a607c; 
+}
+
+/* This deals with the Horiseon title in the header. It deals with the positioning, the font family and size, and the color (except for the color of the SEO which is overwritten later.)*/
+.banner h1 {
+    display: inline-block;
     padding: 20px;
+    font-size: 48px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: #2a607c;
     color: #ffffff;
 }
 
-.header h1 {
-    display: inline-block;
-    font-size: 48px;
-}
-
-.header h1 .seo {
+/* This overwrites the color of the "seo" in "horiseon" to a light grey color. */
+.seo {
     color: #d9dcd6;
 }
 
-.header nav {
-    padding-top: 15px;
+/* 
+This deals with the navigation links. You can use it for their position, and their font family and size.
+Also, I noticed single quotes were missing from the Calibri font family (it showed white text in the CSS file instead of orange)- not sure if I'm meant to add those but I did. */
+.banner nav {
+    padding-top: 35px;
     margin-right: 20px;
     float: right;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', 'sans-serif';
     font-size: 20px;
 }
 
-.header nav ul {
+/* For the 3 navigation links, this makes them in a horizontal line. */
+.banner nav ul {
     list-style-type: none;
 }
 
-.header nav ul li {
+/* For the 3 navigation links, this makes them a horizontal line, and sets the distance between the 3 links. For several hours I tried looking for ways to consolidate ".banner nav", .banner nav ul" and "banner nav ul li", but it seems like they have to be seperated or it doesn't work. I tried multiple combinations for hours but when I moved settings into another it would break it. The best I could do was move information out of ".banner" and isolate that to just the background color. I understand the functions of each setting, but I don't understand why everything under ".banner nav" can't be grouped together.*/
+.banner nav ul li {
     display: inline-block;
     margin-left: 25px;
 }
 
+/* Makes the links white instead of purple or blue, and also takes away the underline that links often have. */
 a {
     color: #ffffff;
     text-decoration: none;
 }
 
+/* Sets the font size of everything within p brackets to 16px. */
 p {
     font-size: 16px;
 }
 
+/* Settings for the class in charge of the big picture. I added height:auto to keep the image from stretching when the aspect ratio changes. Margin is the space between the picture and the 2 blue boxes below. After adding the height:auto, the background size and position controls no longer affect the image from what I can tell, so I've commented them out. I will leave them there to be uncommented if it turns out they're needed, but I see no use for them with the current requirements. */
 .meetingimage {
     height: auto;
     width: 100%;
     margin-bottom: 25px;
-    background-size: cover;
-    background-position: center;
+    /* background-size: cover;
+    background-position: center; */
 }
 
-.float-left {
+/* In the content area, sections 1 and 3 need the pictures to be on the left, so they use this to do that. Margin-right pushes the text away from the picture 25px to the right by increasing the margin of the picture. Max height controls the size of the picture. */
+.picture-left {
     float: left;
     margin-right: 25px;
     max-height: 200px;
 }
 
-.float-right {
+/* In the content area, section 2 needs the picture to be on the right, so it uses this to do that. Margin-left pushes the text away from the picture 25px to the left by increasing the margin of the picture. Max height controls the size of the picture. */
+.picture-right {
     float: right;
     margin-left: 25px;
     max-height: 200px;
 }
 
+/* Puts the content section (the 3 blue boxes on the left) on the left. Gives the boxes 75% of screen real estate (left side) even when you change the display size. inline-block allows this to live in harmony with the blue box on the right by not pushing it below. margin-left pushes the content area to the right by 20px.*/
 .content {
     width: 75%;
     display: inline-block;
     margin-left: 20px; 
 }
 
+/* Pushes the paragraph below each title down by 20px. Also sets the font size of the title of each blue content rectangle to 36px. */
 .content h2 {
     margin-bottom: 20px;
     font-size: 36px; 
 }
 
+/* Pushes the paragraph below each title down by 20px. Also sets the font size of the title of each blue content rectangle to 36px. Sets the height of each box on the left, the color of each box on the left, and the font family and color (white). I added quotes to Calibri to change it to orange in the text editor for the same reasons as above. */
 .content section {
     margin-bottom: 20px;
     padding: 50px;
     height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
     background-color: #0072bb;
     color: #ffffff;
 }
 
-.benefits {
+/* Controls settings for the position of the box on the right side. (the aside area.) Also sets the screen real estate (20% compared to 75% percent with the other boxes) and provides the font family and color (I moved the color to here from .benefit.)  */
+.sidebar {
     margin-right: 20px;
     padding: 20px;
     clear: both;
@@ -99,35 +120,41 @@ p {
     height: 100%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: #2589bd;
-}
-
-.reason {
-    margin-bottom: 32px;
     color: #ffffff;
 }
 
-.reason h3 {
+/* Makes the blue box on the right (the aside area) extend slightly at the bottom. */
+.benefit {
+    margin-bottom: 32px;
+}
+
+/* Settings for the three titles in the blue box on the right (the aside area). Extends the area between the title and the image by 10px. Also centers the three titles within the box.*/
+.benefit h3 {
     margin-bottom: 10px;
     text-align: center;
 }
 
-.reason img {
+/* Settings for the three clipart images in the blue box on the right (the aside area). Display:block forces the text after it to be below it. Margin pushes the text around it away. Width controls the size, but max width was chosen to work better with screen size changes. */
+.benefit img {
     display: block;
     margin: 10px auto;
     max-width: 150px;
 }
 
-.reason p {
+/* Settings for the three paragraphs in the blue box on the right (the aside area). Extends the area below the paragraph by 32px. */
+.benefit p {
 margin-bottom: 32px;
 }
 
-.footer {
+/* Settings for the footer at the bottom. Controls the distance between the footer and the other elements. Also sets the font for the footer and centers it. */
+.copyright {
     padding: 30px;
     clear: both;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
 }
 
-.footer h2 {
+/* Sets the text inside h4 (the title of the footer) to 20px. */
+.copyright h4 {
     font-size: 20px;
 }

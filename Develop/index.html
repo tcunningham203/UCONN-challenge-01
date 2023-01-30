@@ -10,14 +10,14 @@
 </head>
 
 <!-- I changed div elements to header and nav, to better represent what they do. 
-I did research on the "span" class as well to see if it should be changed too- I know that span is not semantic. However, I couldn't find an appropriate semantic element tag to replace it, because all it does is make a part of the word a slightly different color. So, I decided to leave it as is. According to my research, it shouldn't affect accessibility. If I am wrong about this please let me know. -->
+I did research on "span class" as well to see if it should be changed too- I know that span is not semantic. However, I couldn't find an appropriate semantic element tag to replace it, because all it does is make a part of the word a slightly different color. So, I decided to leave it as is. According to my research, it shouldn't affect accessibility. If I am wrong about this please let me know. The other thing I was unsure about was if it was OK to do <header class="header"> or if that was too confusing. So, just to differeciate the element name and the class name, I changed the class name "header" in the CSS to "banner". If this was unnessesary or wrong, please let me know.  -->
 
 <body> 
-    <header class="header">
+    <header class="banner">
         <h1>Hori<span class="seo">seo</span>n</h1>
         <nav>
             <ul>
-                <li> <a href="#search-engine-optimization">Search Engine Optimization</a></li>
+                <li><a href="#search-engine-optimization">Search Engine Optimization</a></li>
                 <li><a href="#online-reputation-management">Online Reputation Management</a></li>
                 <li><a href="#social-media-marketing">Social Media Marketing</a></li>
             </ul>
@@ -30,27 +30,25 @@ I did research on the "span" class as well to see if it should be changed too- I
             <img src="./assets/images/digital-marketing-meeting.jpg" alt="Four employees in a business meeting" class="meetingimage" />
     </section>
 
-
-<!-- There were multiple classes that did the same thing, so I combined them into 1 class. I changed the divs to sections. I also added an id to search-engine-optimization to make the link in the header work. Finally, I added alt attributes to the images to improve search rankings and accessibility. I tried to make my alt attributes as concise as possible. For example, in the first of the three images, I chose not to mention the table, coffee, or notebook because the crux of the image is the web diagram.-->
-
+<!-- There were multiple classes and selectors that did the same thing, so I combined them into 1 class. I changed the divs to sections. I changed some of the CSS names to improve semantics. I also added an id to search-engine-optimization to make the link in the header work. Finally, I added alt attributes to the images to improve search rankings and accessibility. I tried to make my alt attributes as concise as possible. For example, in the first of the three images, I chose not to mention the table, coffee, or notebook because the crux of the image is the web diagram.-->
 
     <section class="content">
         <section id="search-engine-optimization">
-            <img src="./assets/images/search-engine-optimization.jpg" alt="The word SEO in the center of a web diagram" class="float-left" />
+            <img src="./assets/images/search-engine-optimization.jpg" alt="The word SEO in the center of a web diagram" class="picture-left" />
             <h2>Search Engine Optimization</h2>
             <p>
                 The dominance of mobile internet use means that users are searching for the right business as they travel, shop, or sit on their couch at home. Search Engine Optimization (SEO) allows you to increase your visibility and find the right customers for your business.
             </p>
         </section>
         <section id="online-reputation-management">
-            <img src="./assets/images/online-reputation-management.jpg" alt="A bar graph showing reputation increasing" class="float-right" />
+            <img src="./assets/images/online-reputation-management.jpg" alt="A bar graph showing reputation increasing" class="picture-right" />
             <h2>Online Reputation Management</h2>
             <p>
                 The web is full of opinions, and some of these can be negative. Social media allows anyone with an internet connection to say whatever they want about your business. Online Reputation Management gives you the control over what potential customers see when they search for your business.
             </p>
         </section>
         <section id="social-media-marketing">
-            <img src="./assets/images/social-media-marketing.jpg" alt="Employees surrounding a table with buzzwords and app icons" class="float-left" />
+            <img src="./assets/images/social-media-marketing.jpg" alt="Employees surrounding a table with buzzwords and app icons" class="picture-left" />
             <h2>Social Media Marketing</h2>
             <p>
                 Social media continues to have a sizable influence on buying habits. Social media marketing helps you determine which platforms are suited to your brand, using analytics to find the right markets and increase your lead generation.
@@ -58,13 +56,10 @@ I did research on the "span" class as well to see if it should be changed too- I
         </section>
     </section>
 
+<!-- I changed the divs to aside and section. I also reduced the number of classes and selectors by changing all the benefit-XXXXXX stuff in the CSS to just "benefit", since they all had the same settings. I chose the word benefit for the individual points, and changed the aside class name from "benefits" to "sidebar". To make the distance between the three paragraphs better match the sample image, I added ".reason p" to the css and margin-bottom: 32px. Under cost management, there was an unnessesary </img> that I removed. Finally, I added alt attributes to the images to improve search rankings and accessibility. -->
 
-<!-- I changed the divs to aside and section. I also reduced the number of classes by changing all the benefit-XXXXXX stuff in the CSS to just "reason", since they all had the same settings. To make the distance between the three paragraphs better match the sample image, I added ".reason p" to the css and margin-bottom: 32px. Under cost management, there was an unnessesary </img> that I removed. Finally, I added alt attributes to the images to improve search rankings and accessibility. -->
-
-
-
-    <aside class="benefits">
-        <section class="reason">
+    <aside class="sidebar">
+        <section class="benefit">
             <h3>Lead Generation</h3>
             <img src="./assets/images/lead-generation.png" alt="Clip art of a gear going into a funnel to produce money"/>
             <p>
@@ -83,15 +78,13 @@ I did research on the "span" class as well to see if it should be changed too- I
         </section>
     </aside>
    
-<!-- All I did here was change the div to footer. Although there is no footer in the sample image, and the task is to mimic the sample, I was told that this was an error by the person who made the sample image, and the footer was accidentally cut off. So I have left the footer in. -->
+<!-- I changed the div to footer. I changed the class name to "copyright" to make it a different name from the footer element. Not sure if this is needed. I also changed h2 to h4 to keep the heading order correct throughout the document. Although there is no footer in the sample image, and the task is to mimic the sample, I was told that this was an error by the person who made the sample image, and the footer was accidentally cut off. So I have left the footer in. -->
    
-    <footer class="footer">
-        <h2>Made with ❤️️ by Horiseon</h2>
+    <footer class="copyright">
+        <h4>Made with ❤️️ by Horiseon</h4>
         <p>
             &copy; 2019 Horiseon Social Solution Services, Inc.
         </p>
     </footer>
-
 </body>
-
 </html>
