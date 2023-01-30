@@ -58,35 +58,40 @@ I did research on the "span" class as well to see if it should be changed too- I
         </section>
     </section>
 
-    <div class="benefits">
-        <div class="benefit-lead">
+
+<!-- I changed the divs to aside and section. I also reduced the number of classes by changing all the benefit-XXXXXX stuff in the CSS to just "reason", since they all had the same settings. To make the distance between the three paragraphs better match the sample image, I added ".reason p" to the css and margin-bottom: 32px. Under cost management, there was an unnessesary </img> that I removed. Finally, I added alt attributes to the images to improve search rankings and accessibility. -->
+
+
+
+    <aside class="benefits">
+        <section class="reason">
             <h3>Lead Generation</h3>
-            <img src="./assets/images/lead-generation.png" />
+            <img src="./assets/images/lead-generation.png" alt="Clip art of a gear going into a funnel to produce money"/>
             <p>
                 Inbound strategies for lead generation require less work for your business, bringing customers directly to your website.
             </p>
-        </div>
-        <div class="benefit-brand">
             <h3>Brand Awareness</h3>
-            <img src="./assets/images/brand-awareness.png" />
+            <img src="./assets/images/brand-awareness.png" alt="Clip art of a glowing light bulb with a suit and tie body"/>
             <p>
                 Users find your business through paid and organic searches, increasing the search ranking and visibility for your business.
             </p>
-        </div>
-        <div class="benefit-cost">
             <h3>Cost Management</h3>
-            <img src="./assets/images/cost-management.png"></img>
+            <img src="./assets/images/cost-management.png" alt="Clip art of a gear behind three coins">
             <p>
                 As the search ranking for your business increases, your advertising costs decrease, and you no longer need to advertise your page.
             </p>
-        </div>
-    </div>
-    <div class="footer">
+        </section>
+    </aside>
+   
+<!-- All I did here was change the div to footer. Although there is no footer in the sample image, and the task is to mimic the sample, I was told that this was an error by the person who made the sample image, and the footer was accidentally cut off. So I have left the footer in. -->
+   
+    <footer class="footer">
         <h2>Made with ❤️️ by Horiseon</h2>
         <p>
             &copy; 2019 Horiseon Social Solution Services, Inc.
         </p>
-    </div>
+    </footer>
+
 </body>
 
 </html>

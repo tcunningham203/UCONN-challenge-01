@@ -19,3 +19,10 @@ Moved big image from CSS file to html
 Added id to "search-engine-optimization" to get the link working
 Added alt attributes to the images
 Consolidated some of the CSS classes into 1 class
+
+Commit 05 "Side section and Footer"
+Changed div to aside and footer in their respective areas
+Consolidated some of the CSS classes into 1 class
+Added .reason p to the CSS to make the aside formatting better match the sample image
+Cleaned up unneeded tags
+Reordered CSS slightly to match the html order of appearance
