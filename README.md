@@ -12,4 +12,10 @@ Commit 03 "Head and Header"
 Changed div elements in the header to nav
 Cleaned up the li elements to look nicer
 Changed the head title to be a concise, descriptive title
+
+Commit 04 "Main section"
+Changed div elements to improve semantics
+Moved big image from CSS file to html
 Added id to "search-engine-optimization" to get the link working
+Added alt attributes to the images
+Consolidated some of the CSS classes into 1 class
