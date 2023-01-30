@@ -1,10 +1,15 @@
 # UCONN CHALLENGE 01- REFACTOR CODE
 
 ## Table of Contents
+
 01 Challenge Requirements
+
 02 Summary of What I Did And Thoughts On The Project
+
 03 Screenshot of Deployed Application
+
 04 Link to deployed application
+
 05 Detailed notes about changes in each commit
 
 
@@ -118,11 +123,14 @@ If possible, I would like to see an example of an "A+" finished project so I can
 
 
 # 03 Screenshot of Deployed Application
-To be added in a future commit
+In the Git Hub Repository, in the assets folder, there is a screenshot named WEBSITE-SCREENSHOT.png. The website is long, so it is 3 images stitched together in mspaint. At the top of the screenshot is some basic information about the project.
 
+.\assets\WEBSITE-SCREENSHOT.png
+
+If the way to present this screenshot was incorrect, I would like to know about it.
 
 # 04 Link to deployed application
-To be added in a future commit
+https://tcunningham203.github.io/UCONN-challenge-01/
 
 
 # 05 Detailed notes about changes in each commit
@@ -162,9 +170,11 @@ Changed h2 in footer to h4 (missed that in the previous commit)
 Updated the CSS to be more semantic
 Updated readme to include task information
 
+Commit 07 "File Structure"
+Moved files to root folder so the website can work
 
-
-
+Commit 08 "website"
+Added website url and screenshot to readme
 
 
 
